@@ -128,7 +128,7 @@ dns_mode: kubedns
 #manual_dns_server: 10.x.x.x
 nameservers: 192.168.200.10
 
-upstream_dns_servers: 192.168.200.10
+#upstream_dns_servers: 192.168.200.10
 # Can be docker_dns, host_resolvconf or none
 resolvconf_mode: host_resolvconf
 # Deploy netchecker app to verify DNS resolve as an HTTP service
