@@ -53,6 +53,9 @@ bin_dir: /opt/bin
 ## The subnets of each nodes will be distributed by the datacenter router
 #peer_with_router: false
 
+#nameservers:
+#  - 192.168.200.10
+
 ## Upstream dns servers used by dnsmasq
 upstream_dns_servers:
   - 192.168.200.10
