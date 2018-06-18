@@ -8,8 +8,8 @@
 #   - foo.bar.lc
 
 # Max of 2 is allowed here (a 1 is reserved for the dns_server)
-# nameservers:
-#   - 127.0.0.1
+nameservers:
+   - 192.168.200.10
 
 dns_forward_max: 150
 cache_size: 1000
