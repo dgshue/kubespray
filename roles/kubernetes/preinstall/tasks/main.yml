@@ -1,4 +1,9 @@
 ---
+- name: Disable swap
+  include: swapoff.yml
+  tags: configure
+  when: disable_swap
+
 - import_tasks: verify-settings.yml
   tags:
     - asserts
