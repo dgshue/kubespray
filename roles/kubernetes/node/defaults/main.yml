@@ -1,4 +1,6 @@
 ---
+disable_swap: true
+
 # Valid options: docker (default), rkt, or host
 kubelet_deployment_type: host
 
