@@ -4,6 +4,10 @@
   tags: configure
   when: disable_swap
 
+- name: Disable firewalld
+  include: disable-firewalld.yml
+  tags: configure
+
 - import_tasks: verify-settings.yml
   tags:
     - asserts
