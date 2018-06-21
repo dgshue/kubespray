@@ -1,6 +1,8 @@
 ---
 disable_swap: true
 
+disable_firewalld: true
+
 run_gitinfos: false
 
 # Set to true to allow pre-checks to fail and continue deployment

@@ -7,6 +7,7 @@
 - name: Disable firewalld
   include: disable-firewalld.yml
   tags: configure
+  when: disable_firewalld
 
 - import_tasks: verify-settings.yml
   tags:
