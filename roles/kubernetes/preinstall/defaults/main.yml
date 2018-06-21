@@ -1,7 +1,7 @@
 ---
 disable_swap: true
 
-disable_firewalld: true
+disable_firewalld: false
 
 run_gitinfos: false
 
