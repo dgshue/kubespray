@@ -6,10 +6,13 @@
       state: present
   - name: Load required modules for glusterfs
     modprobe:
-      name:
-        - dm_snapshot
-        - dm_mirror
-        - dm_thin_pool
+      name: dm_snapshot
+      state: present
+    modprobe:
+      name: dm_mirror
+      state: present
+    modprobe:
+      name: dm_thin_pool
       state: present
   - name: Create file to load modules at boot
     blockinfile:
