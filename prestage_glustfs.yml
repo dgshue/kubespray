@@ -21,7 +21,7 @@
         dm_snapshot
         dm_mirror
         dm_thin_pool
-      path: "/etc/module-load.d/glusterfs-modules.conf"
+      path: "/etc/modules-load.d/glusterfs-modules.conf"
       owner: root
       group: root
       mode: 0644
