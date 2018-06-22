@@ -1,0 +1,22 @@
+---
+- name: Install a glusterfs-fuse
+  yum:
+    name: glusterfs-fuse
+    state: present
+- name: Load required modules for glusterfs
+  modprobe: name={{item}} state=present
+  with_items:
+    - dm_snapshot
+    - dm_mirror
+    - dm_thin_pool
+- name: Create file to load modules at boot
+  blockinfile:
+    create: yes
+    block: |
+      dm_snapshot
+      dm_mirror
+      dm_thin_pool
+    path: "/etc/modules-load.d/glusterfs-modules.conf"
+    owner: root
+    group: root
+    mode: 0644

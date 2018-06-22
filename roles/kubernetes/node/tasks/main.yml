@@ -3,7 +3,11 @@
   include: swapoff.yml
   tags: configure
   when: disable_swap
-    
+
+- import_tasks: prestage_glustfs.yml
+  tags:
+    - kubelet
+
 - import_tasks: facts.yml
   tags:
     - facts
