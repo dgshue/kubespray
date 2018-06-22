@@ -1,6 +1,24 @@
 - hosts: kube-node
   tasks:
-  - name: Install a yum package in Ansible example
+  - name: Install a glusterfs-fuse
     yum:
       name: glusterfs-fuse
       state: present
+  - name: Load required modules for glusterfs
+    modprobe:
+      name:
+        - dm_snapshot
+        - dm_mirror
+        - dm_thin_pool
+      state: present
+  - name: Create file to load modules at boot
+    blockinfile:
+      create: yes
+      block: |
+        dm_snapshot
+        dm_mirror
+        dm_thin_pool
+      path: "/etc/module-load.d/glusterfs-modules.conf"
+      owner: root
+      group: root
+      mode: 0644
