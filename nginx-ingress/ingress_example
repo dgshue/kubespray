@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: <ingress_name>
+spec:
+ rules:
+   - host: example.uncg.ed # <- CNAME
+     http:
+       paths:
+         - path: /
+           backend:
+             serviceName: <service name>
+             servicePort: <service_port> # ie. the internal port offered by the CluterIP
